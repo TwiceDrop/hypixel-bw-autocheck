@@ -1,0 +1,3 @@
+interval_seconds = 10
+monitor_player = your_minecraft_name
+monitor_enabled = True
