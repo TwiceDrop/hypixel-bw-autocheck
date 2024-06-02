@@ -12,6 +12,7 @@ def read_config():
             f.write('interval_seconds = 10\n')
             f.write('monitor_player = your_minecraft_username\n')
             f.write('monitor_enabled = True\n')
+            f.write('hypixel_api_key = input your api key here\n')
     with open('config.txt', 'r') as f:
         for line in f:
             key, value = line.strip().split(' = ')
@@ -21,7 +22,7 @@ def read_config():
 config = read_config()
 
 # Hypixel API密钥
-API_KEY = 'input your api key here'
+API_KEY = config['hypixel_api_key']
 
 # 配置参数
 INTERVAL_SECONDS = int(config['interval_seconds'])
